@@ -1,0 +1,14 @@
+[manager]
+p12 ansible_host=192.168.6.12  ansible_ssh_private_key_file=.vagrant/machines/p12/virtualbox/private_key ansible_ssh_common_args='-o StrictHostKeyChecking=no' 
+
+[worker]
+p11 ansible_host=192.168.6.11  ansible_ssh_private_key_file=.vagrant/machines/p11/virtualbox/private_key ansible_ssh_common_args='-o StrictHostKeyChecking=no' 
+p10 ansible_host=192.168.6.10  ansible_ssh_private_key_file=.vagrant/machines/p10/virtualbox/private_key ansible_ssh_common_args='-o StrictHostKeyChecking=no' 
+
+[all:children]
+manager
+worker
+
+
+[all:vars]
+ansible_ssh_user=vagrant

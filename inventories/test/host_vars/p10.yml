@@ -1,0 +1,5 @@
+
+alias_hosts:
+    p10: [ "dbstat" , "dbstat2" ]
+    p11: ["dbhostsec"]
+    p12: ["dbhostprim"]
